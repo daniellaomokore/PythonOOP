@@ -37,7 +37,6 @@ class Animal:
         self.age = age
         Animal.number_of_animals +=1  #To access a class attribute (when we arent inside a class method) we must mention the class name first.
 
-
     # A class method
     @classmethod
     def increase_to_my_learning_ranking(cls):
