@@ -11,3 +11,5 @@ Object Oriented Programming In Python
 - Classes and Objects
 - Class attributes
 - Instance variables
+- Denotation concept for public and private classes
+- Optional Parameters using default values

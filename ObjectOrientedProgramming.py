@@ -27,6 +27,10 @@
 """
 
 
+"""
+Optional parameters are created using a default value.
+"""
+
 class Animal:
 
     number_of_animals = 0 # A class attribute
@@ -86,6 +90,13 @@ class Cat(Animal):
 
 class Dog(Animal):
 
+    def __init__(self,name,age,puppies=0):  #puppies is a default value of 0, so therefore an optional paraeter. If you want it to be a different number,when you initialise an object of the class enter it as a parameter e.g 'puppies=18'.
+        super().__init__(name,age)
+        self.puppies=puppies
+
+    def numer_of_puppies(self):
+        return f"I have {self.puppies} puppies"
+
     def sound(self):
         return "woof"
 
@@ -99,6 +110,7 @@ class Dog(Animal):
 
 animal1=Animal("ani",6)
 dog1=Dog("Brandy", 12)
+dog2=Dog("Tim", 1, 17) #here i've set the 'puppies' optional parameter to 17.
 cat1=Cat("Kitkat", 3,5)
 
 print(animal1.get_name())
@@ -112,8 +124,10 @@ print(dog1.get_age())
 print(dog1.go_sleep())
 print(dog1.sound())
 print(dog1.number_of_animals)
+print(dog1.numer_of_puppies())
 
-
+print("\n")
+print(dog2.numer_of_puppies())
 
 print("\n")
 print(cat1.get_name())
